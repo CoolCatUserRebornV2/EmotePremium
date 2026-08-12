@@ -15,7 +15,12 @@ local Emotes = {
 	["Neck Roller"] = "110855869390004",
 	["Jamal Brazil Groove"] = "83796130837213",
 	["wall phase"] = "73061206570424",
-	["Katseye --- ???"] = "121765042386581"
+	["Katseye --- ???"] = "121765042386581",
+	["needy"] = "98126345395357",
+	["moonwalk"] = "134048087973127",
+	["raiden punch"] = "126264342780589",
+	["IGTFG V2"] = "92127990487686",
+	["goofy flap"] = "118417760427139"
 }
 
 --==================================================
@@ -142,8 +147,8 @@ toggleStroke.Parent = toggle
 --==================================================
 
 local frame = Instance.new("Frame")
-frame.Size = UDim2.new(0, 250, 0, 280)
-frame.Position = UDim2.new(0.5, -125, 0.5, -115)
+frame.Size = UDim2.new(0, 250, 0, 510)
+frame.Position = UDim2.new(0.5, -125, 0.5, -255)
 frame.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
 frame.BorderSizePixel = 0
 frame.Parent = gui
@@ -206,6 +211,11 @@ local button2 = createEmoteButton("Neck Roller", 93)
 local button3 = createEmoteButton("Jamal Brazil Groove", 138)
 local button4 = createEmoteButton("wall phase", 183)
 local button5 = createEmoteButton("Katseye --- ???", 228)
+local button6 = createEmoteButton("needy", 273)
+local button7 = createEmoteButton("moonwalk", 318)
+local button8 = createEmoteButton("raiden punch", 363)
+local button9 = createEmoteButton("IGTFG V2", 408)
+local button10 = createEmoteButton("goofy flap", 453)
 
 --==================================================
 -- ANIMATION SYSTEM
@@ -280,6 +290,27 @@ end)
 button5.MouseButton1Click:Connect(function()
 	playEmote(Emotes["Katseye --- ???"])
 end)
+
+button6.MouseButton1Click:Connect(function()
+	playEmote(Emotes["needy"])
+end)
+
+button7.MouseButton1Click:Connect(function()
+	playEmote(Emotes["moonwalk"])
+end)
+
+button8.MouseButton1Click:Connect(function()
+	playEmote(Emotes["raiden punch"])
+end)
+
+button9.MouseButton1Click:Connect(function()
+	playEmote(Emotes["IGTFG V2"])
+end)
+
+button10.MouseButton1Click:Connect(function()
+	playEmote(Emotes["goofy flap"])
+end)
+
 --==================================================
 -- STOP ON MOVEMENT / JUMP / SWIM / ETC.
 --==================================================
@@ -395,7 +426,12 @@ for _, button in ipairs({
 	button2,
 	button3,
 	button4,
-	button5
+	button5,
+	button6,
+	button7,
+	button8,
+	button9,
+	button10
 }) do
 	local stroke = button:FindFirstChildOfClass("UIStroke")
 
